@@ -1,5 +1,7 @@
 #!/bin/bash
 # this script demonstrates looping and testing
+# # this could also be done with a single pipeline for configured interfaces
+# intfs=$(ip r |grep -v default|awk '{printf "%12s : %18s", $3, $1}'|sort -u) ; echo $intfs
 
 function networkreport {
 interfaces="$( ip l|
